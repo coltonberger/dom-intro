@@ -6,18 +6,18 @@ window.onload = function() {
   //2. Set the background color of each `<li>` to `yellow`.
   let allListItems = document.querySelectorAll("li");
   allListItems.forEach((listItem) =>{
-    listItem.style.backgroundColor = 'yellow'
-    listItem.addEventListener('click', namedFunction);
+    listItem.style.backgroundColor = "yellow"
+    listItem.addEventListener("click", namedFunction);
 })
 
   //3. Create an image tag, set its `src` attribute to...and append the to the `#greeting` div.
-  let createImage = document.createElement('img');
+  let createImage = document.createElement("img");
   createImage.setAttribute("src", "http://49.media.tumblr.com/tumblr_m6qt1rjPSz1rxjzkho1_500.gif")
   document.getElementById("greeting").appendChild(createImage);
 
   //4. Add the class of `selected` to an `<li>` when it is clicked. Remove it from any other `li`s as well.
   function namedFunction(event){
-  let elem = document.querySelector('.selected')
+  let elem = document.querySelector(".selected")
     if(elem) {
       elem.className = "";
     }
@@ -50,18 +50,18 @@ window.onload = function() {
 //   from each `<li>` and change the image to `panic.jpeg`.
 
 document.querySelector("#reset")
-    .addEventListener('click',function(){
-      let currentSelected = document.querySelector('.selected');
+    .addEventListener("click",function(){
+      let currentSelected = document.querySelector(".selected");
       if ( currentSelected ) {
         currentSelected.className = "";
-        allListItems[1].className = 'selected';
+        allListItems[1].className = "selected";
       }
       document.querySelectorAll("img")[1].setAttribute("src","./images/panic.jpeg")
     })
 
 //9. When the 1, 2, 3, 4, 5, 6, 7, 8, 9, or 0 key is pressed, the
 //   page alerts the message "I HATE NUMBERZZZ!"
-  document.addEventListener('keypress', (event) => {
+  document.addEventListener("keypress", (event) => {
     const keyName = event.key;
     if(keyName >= 0 && keyName <= 9) {
     alert("I HATE NUMBERZZZ");
