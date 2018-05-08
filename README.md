@@ -1,3 +1,5 @@
+Deployed URL: http://dom_intro.surge.sh/
+
 # DOM_Intro_Exercise
 
 Practice manipulating the DOM!
